@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio - Hi Hello Coffee</title>
+
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+
+<body>
+
+    <header class="cabecalho-cardapio">
+        <a href="index.html" class="btn-voltar">← Voltar para o início</a>
+
+        <h1>Nosso Cardápio</h1>
+
+        <p>Escolha seu favorito e aproveite a experiência Hi Hello Coffee.</p>
+
+        <div class="carrinho-indicador">
+            🛒 Carrinho:
+            <span id="contador-carrinho">0</span>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PÃES -->
+        <section class="categoria" id="paes">
+
+            <h2>🥐 Pães</h2>
+
+            <div class="itens-cardapio">
+
+                <article class="item-cardapio"
+                    data-nome="Bagetas"
+                    data-descricao="Bagetas fresquinhas preparadas todos os dias, com sabor artesanal e textura crocante."
+                    data-preco="6,00">
+
+                    <img src="imagens/Bageta.jpg" alt="Bagetas">
+
+                    <h3>Bagetas</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Pão Francês"
+                    data-descricao="Pão francês fresquinho e crocante, perfeito para qualquer momento do dia."
+                    data-preco="2,00">
+
+                    <img src="imagens/pao.jpg" alt="Pão Francês">
+
+                    <h3>Pão Francês</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Pão de Queijo"
+                    data-descricao="Pão de queijo quentinho, macio por dentro e cheio de sabor."
+                    data-preco="4,00">
+
+                    <img src="imagens/Gemini_Generated_Image_2ngrlw2ngrlw2ngr.jpg" alt="Pão de Queijo">
+
+                    <h3>Pão de Queijo</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Pão Integral"
+                    data-descricao="Uma opção deliciosa e equilibrada para acompanhar seu café."
+                    data-preco="6,00">
+
+                    <img src="imagens/pi.jpg" alt="Pão Integral">
+
+                    <h3>Pão Integral</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- TAPIOCAS -->
+        <section class="categoria" id="tapiocas">
+
+            <h2>🫓 Tapiocas</h2>
+
+            <div class="itens-cardapio-tapiocas">
+
+                <article class="item-cardapio"
+                    data-nome="Tapioca Sabor Cartola"
+                    data-descricao="Tapioca estilo cartola, preparada artesanalmente com uma combinação especial de sabores."
+                    data-preco="14,50">
+
+                    <img src="imagens/tapioca1.jpeg" alt="Tapioca sabor cartola">
+
+                    <h3>Tapioca Sabor Cartola</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Tapioca de Frango Gourmet"
+                    data-descricao="Tapioca recheada com frango cremoso e Catupiry."
+                    data-preco="14,50">
+
+                    <img src="imagens/tapioca2.jpeg" alt="Tapioca de frango gourmet">
+
+                    <h3>Tapioca de Frango Gourmet</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Tapioca de Pizza"
+                    data-descricao="Tapioca inspirada no sabor clássico de pizza, com queijo e ingredientes especiais."
+                    data-preco="14,50">
+
+                    <img src="imagens/tapioca3.jpeg" alt="Tapioca de pizza">
+
+                    <h3>Tapioca de Pizza</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Tapioca Tradicional na Manteiga"
+                    data-descricao="Tapioca tradicional preparada na manteiga, simples, quentinha e deliciosa."
+                    data-preco="10,50">
+
+                    <img src="imagens/tapioca4.jpeg" alt="Tapioca tradicional na manteiga">
+
+                    <h3>Tapioca Tradicional na Manteiga</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- SALGADOS -->
+        <section class="categoria">
+
+            <h2>🥐 Salgados</h2>
+
+            <div class="itens-cardapio-salgados">
+
+                <article class="item-cardapio"
+                    data-nome="Quiche Lorraine"
+                    data-descricao="Tradicional torta francesa com recheio cremoso de bacon, queijo e ovos em uma massa leve e crocante."
+                    data-preco="15,00">
+
+                    <img src="imagens/Classic Quiche Lorraine Recipe.jpg" alt="Quiche Lorraine">
+
+                    <h3>Quiche Lorraine</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Croissant de Queijo"
+                    data-descricao="Clássico croissant folhado, dourado e crocante, recheado com queijo derretido."
+                    data-preco="12,00">
+
+                    <img src="imagens/cq.jpg" alt="Croissant de Queijo">
+
+                    <h3>Croissant de Queijo</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Flamiche"
+                    data-descricao="Clássica massa folhada francesa, crocante e amanteigada, recheada com queijo derretido."
+                    data-preco="18,00">
+
+                    <img src="imagens/Flamiche.jpg" alt="Flamiche">
+
+                    <h3>Flamiche</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Gougères"
+                    data-descricao="Folheados salgados leves e aerados, preparados com queijo Gruyère."
+                    data-preco="12,00">
+
+                    <img src="imagens/Gougères.jpg" alt="Gougères">
+
+                    <h3>Gougères</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Torta de Queijo Roquefort"
+                    data-descricao="Torta cremosa de queijo Roquefort equilibrada com mel silvestre e lâminas de amêndoas tostadas."
+                    data-preco="16,00">
+
+                    <img src="imagens/Torta de Queijo Roquefort.jpg" alt="Torta de Queijo Roquefort">
+
+                    <h3>Torta de Queijo Roquefort</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Coxinha de Frango com Catupiry"
+                    data-descricao="Frango desfiado temperado com a cremosidade do Catupiry em uma massa crocante."
+                    data-preco="5,00">
+
+                    <img src="imagens/coxinha.jpg" alt="Coxinha de Frango com Catupiry">
+
+                    <h3>Coxinha de Frango com Catupiry</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <!-- DOCES -->
+        <section class="categoria" id="doces">
+
+            <h2>🍰 Doces</h2>
+
+            <div class="itens-cardapio-doce">
+
+                <article class="item-cardapio"
+                    data-nome="Macarons"
+                    data-descricao="Crocantes por fora e macios por dentro, com recheios cremosos selecionados."
+                    data-preco="8,50">
+
+                    <img src="imagens/Macaron.jpg" alt="Macarons">
+
+                    <h3>Macarons</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Éclair"
+                    data-descricao="Tradicional massa choux francesa, recheada com creme aveludado e coberta com uma fina camada brilhante de fondant."
+                    data-preco="12,00">
+
+                    <img src="imagens/bomba c.jpg" alt="Éclair">
+
+                    <h3>Éclair</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Mille-Feuille"
+                    data-descricao="Três camadas de massa folhada crocante e caramelizada, intercaladas com creme de confeiteiro de baunilha."
+                    data-preco="21,50">
+
+                    <img src="imagens/Mille-Feuille.jpg" alt="Mille-Feuille">
+
+                    <h3>Mille-Feuille</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- BEBIDAS / CAFÉS -->
+        <section class="categoria" id="cafes">
+
+            <h2>☕ Bebidas</h2>
+
+            <div class="itens-cardapio-bebidas">
+
+                <article class="item-cardapio"
+                    data-nome="Café"
+                    data-descricao="Um café forte e delicioso, preparado com grãos de qualidade."
+                    data-preco="4,00">
+
+                    <img src="imagens/cafe.jpg" alt="Café">
+
+                    <h3>Café</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Fanta"
+                    data-descricao="Uma bebida refrescante e saborosa, perfeita para acompanhar suas refeições."
+                    data-preco="3,50">
+
+                    <img src="imagens/fanta.jpeg" alt="Fanta">
+
+                    <h3>Fanta</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Fanta Uva"
+                    data-descricao="Refrigerante sabor uva, refrescante e perfeito para acompanhar seu pedido."
+                    data-preco="3,50">
+
+                    <img src="imagens/fanta uva.jpeg" alt="Fanta Uva">
+
+                    <h3>Fanta Uva</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Cappuccino"
+                    data-descricao="Um café cremoso e saboroso, preparado com grãos de qualidade."
+                    data-preco="9,00">
+
+                    <img src="imagens/cappuccino.jpeg" alt="Cappuccino">
+
+                    <h3>Cappuccino</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Mocha"
+                    data-descricao="Café espresso cremoso combinado com chocolate, finalizado com creme e raspas de chocolate."
+                    data-preco="12,00">
+
+                    <img src="imagens/mocha.jpeg" alt="Mocha">
+
+                    <h3>Mocha</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Chocolate Quente"
+                    data-descricao="Um chocolate quente e cremoso, perfeito para um momento aconchegante."
+                    data-preco="10,00">
+
+                    <img src="imagens/Chocolate Quente.jpeg" alt="Chocolate Quente">
+
+                    <h3>Chocolate Quente</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Frappe de Chocolate"
+                    data-descricao="Frappe gelado de chocolate, cremoso e perfeito para os dias quentes."
+                    data-preco="15,00">
+
+                    <img src="imagens/FRAPPE DE CHOCOLATE.jpeg" alt="Frappe de Chocolate">
+
+                    <h3>Frappe de Chocolate</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Chá Gelado de Frutas"
+                    data-descricao="Chá gelado refrescante preparado com sabores de frutas naturais."
+                    data-preco="9,00">
+
+                    <img src="imagens/CHÁ GELADO DE FRUTAS.jpeg" alt="Chá Gelado de Frutas">
+
+                    <h3>Chá Gelado de Frutas</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Limonada Finis"
+                    data-descricao="Uma limonada gelada e refrescante, perfeita para acompanhar sua experiência na Hi Hello Coffee."
+                    data-preco="10,00">
+
+                    <img src="imagens/limonada finis.jpeg" alt="Limonada Finis">
+
+                    <h3>Limonada Finis</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ESPECIALIDADES -->
+        <section class="categoria">
+
+            <h2>✨ Especialidades da Casa</h2>
+
+            <div class="itens-cardapio-especialidades">
+
+                <article class="item-cardapio"
+                    data-nome="Sky Dream"
+                    data-descricao="Casquinha crocante de chocolate, recheio cremoso e base de biscoito artesanal."
+                    data-preco="14,50">
+
+                    <img src="imagens/sky dream.png" alt="Sky Dream">
+
+                    <h3>Sky Dream</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio"
+                    data-nome="Bonjour"
+                    data-descricao="Massa especial recheada com frango cremoso, queijo e temperos selecionados."
+                    data-preco="16,50">
+
+                    <img src="imagens/ChatGPT Image 9 de set. de 2026, 19_39_22.png" alt="Bonjour">
+
+                    <h3>Bonjour</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio destaque"
+                    data-nome="HI"
+                    data-descricao="Nossa bebida assinatura: uma combinação deliciosa de chocolate, café e creme, criada especialmente para representar a identidade Hi Hello Coffee."
+                    data-preco="16,90">
+
+                    <img src="imagens/Hi.jpeg" alt="HI">
+
+                    <h3>HI</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+
+                <article class="item-cardapio destaque"
+                    data-nome="Hello"
+                    data-descricao="Café cremoso com baunilha e leite, uma bebida leve, doce e irresistível."
+                    data-preco="15,90">
+
+                    <img src="imagens/hello.jpeg" alt="Hello">
+
+                    <h3>Hello</h3>
+
+                    <button class="btn-carrinho">
+                        Adicionar ao carrinho
+                    </button>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <a href="index.html" class="btn-inicio">
+            Voltar para o início
+        </a>
+
+    </main>
+
+
+    <!-- MODAL DO PRODUTO -->
+    <div class="modal" id="modal-produto">
+
+        <div class="modal-conteudo">
+
+            <button class="fechar-modal" id="fechar-modal">
+                ×
+            </button>
+
+            <img id="modal-imagem" src="" alt="">
+
+            <div class="modal-info">
+
+                <h2 id="modal-nome"></h2>
+
+                <p id="modal-descricao"></p>
+
+                <strong id="modal-preco"></strong>
+
+                <button id="modal-carrinho" class="btn-modal-carrinho">
+                    Adicionar ao carrinho
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<div class="modal-cadastro" id="modal-cadastro">
+
+    <div class="modal-cadastro-conteudo">
+
+        <button class="fechar-cadastro" id="fechar-cadastro">
+            x
+        </button>
+
+        <div class="icone-cadastro">
+            🔒
+        </div>
+
+        <h2>Crie sua conta</h2>
+
+        <p>
+            Para adicionar produtos ao carrinho,
+            você precisa estar cadastrado na
+            <strong>Hi Hello Coffee</strong>.
+        </p>
+
+        <a href="cadastro.html" class="btn-cadastro">
+            Fazer cadastro
+        </a>
+
+        <button class="btn-continuar" id="continuar-cardapio">
+            Continuar vendo o cardápio
+        </button>
+
+    </div>
+
+</div>
+    <script>
+
+
+    const produtos = document.querySelectorAll(".item-cardapio");
+
+    const modal = document.getElementById("modal-produto");
+    const fecharModal = document.getElementById("fechar-modal");
+
+    const modalImagem = document.getElementById("modal-imagem");
+    const modalNome = document.getElementById("modal-nome");
+    const modalDescricao = document.getElementById("modal-descricao");
+    const modalPreco = document.getElementById("modal-preco");
+    const modalCarrinho = document.getElementById("modal-carrinho");
+
+    const contadorCarrinho =
+        document.getElementById("contador-carrinho");
+
+
+
+    const modalCadastro =
+        document.getElementById("modal-cadastro");
+
+    const fecharCadastro =
+        document.getElementById("fechar-cadastro");
+
+    const continuarCardapio =
+        document.getElementById("continuar-cardapio");
+
+
+
+    let quantidadeCarrinho = 0;
+
+    let produtoAtual = null;
+
+
+    function usuarioEstaLogado() {
+
+        return localStorage.getItem("usuarioLogado") === "true";
+
+    }
+
+
+
+    function verificarCadastro() {
+
+        if (usuarioEstaLogado()) {
+
+            adicionarCarrinho();
+
+        } else {
+
+            modalCadastro.classList.add("ativo");
+
+        }
+
+    }
+
+    function adicionarCarrinho() {
+
+        quantidadeCarrinho++;
+
+        contadorCarrinho.textContent =
+            quantidadeCarrinho;
+
+        alert("Produto adicionado ao carrinho!");
+
+    }
+
+
+    produtos.forEach(produto => {
+
+        const botao =
+            produto.querySelector(".btn-carrinho");
+
+
+
+        produto.addEventListener("click", function () {
+
+            produtoAtual = produto;
+
+            const imagem =
+                produto.querySelector("img");
+
+
+            modalImagem.src = imagem.src;
+
+            modalImagem.alt = imagem.alt;
+
+            modalNome.textContent =
+                produto.dataset.nome;
+
+            modalDescricao.textContent =
+                produto.dataset.descricao;
+
+            modalPreco.textContent =
+                "R$ " + produto.dataset.preco;
+
+
+            modal.classList.add("ativo");
+
+        });
+
+
+        botao.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            verificarCadastro();
+
+        });
+
+    });
+
+
+
+    modalCarrinho.addEventListener("click", function () {
+
+        verificarCadastro();
+
+    });
+
+
+
+    fecharModal.addEventListener("click", function () {
+
+        modal.classList.remove("ativo");
+
+    });
+
+
+    modal.addEventListener("click", function (event) {
+
+        if (event.target === modal) {
+
+            modal.classList.remove("ativo");
+
+        }
+
+    });
+
+
+    fecharCadastro.addEventListener("click", function () {
+
+        modalCadastro.classList.remove("ativo");
+
+    });
+
+
+    continuarCardapio.addEventListener("click", function () {
+
+        modalCadastro.classList.remove("ativo");
+
+    });
+
+
+    modalCadastro.addEventListener("click", function (event) {
+
+        if (event.target === modalCadastro) {
+
+            modalCadastro.classList.remove("ativo");
+
+        }
+
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            modal.classList.remove("ativo");
+
+            modalCadastro.classList.remove("ativo");
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

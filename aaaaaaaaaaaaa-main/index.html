@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Padaria Tech - pães, bolos, cafés e doces frescos preparados todos os dias na Zona Sul de São Paulo.">
+
+    <title>Hi & Hello</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="fundo"></div>
+    <div class="fundo-escuro"></div>
+
+    <header>
+        <div class="logo">
+            <span>Hi & Hello</span>
+            <small>BAKERY • CAFÉ</small>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuPrincipal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="menuPrincipal" aria-label="Menu principal">
+            <a href="./cardapio.html">Cardápio</a>
+            <a href="./historia.html">Sobre nós</a>
+            <a href="#instagram">Instagram</a>
+
+            <!-- Aparece somente quando NÃO estiver logado -->
+            <a href="./cadastro.html" class="nav-botao nav-cadastro" id="menuCriarConta">
+                Criar conta
+            </a>
+            <a href="./login.html" class="nav-botao nav-login" id="menuLogin">
+                Login
+            </a>
+
+            <!-- Aparece somente quando estiver logado -->
+            <a href="./perfil.html" class="nav-botao nav-perfil" id="menuPerfil" style="display: none;">
+                Perfil
+            </a>
+            <a href="#" class="nav-botao nav-sair" id="menuSair" style="display: none;">
+                Sair
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 0. VÍDEO DE ABERTURA -->
+        <section class="inicio" id="inicio">
+            <video class="video-inicio" autoplay muted loop playsinline preload="auto">
+                <source src="videos/Video-hi-hello-fachada.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- 1. FACHADA -->
+        <section class="fachada-balao">
+            <div class="fachada-imagem">
+                <img src="imagens/fachada.jpg" alt="Fachada da Hi & Hello">
+            </div>
+
+            <div class="fachada-texto">
+                <span>CONHEÇA A HI & HELLO</span>
+                <h2>Um lugar feito para você.</h2>
+                <p>
+                    Descubra nossa padaria, nosso café e todas as delícias
+                    preparadas especialmente para tornar seu dia mais gostoso.
+                </p>
+                <a href="historia.html" class="botao-fachada">
+                    Conheça nossa história
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. PRODUTOS EM DESTAQUE -->
+        <section class="destaques-produtos" id="produto">
+            <div class="titulo-destaques">
+                <span>NOSSOS DESTAQUES</span>
+                <h2>Experimente nossos favoritos</h2>
+                <div class="linha-subtitulo"></div>
+                <p>
+                    Conheça alguns dos sabores que fazem parte da experiência
+                    Hi & Hello.
+                </p>
+            </div>
+
+            <div class="videos-destaques">
+                <!-- SKY DREAM -->
+                <article class="video-produto">
+                    <h3>Sky Dream</h3>
+                    <div class="video-moldura">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="videos/sky-drem.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                </article>
+
+                <!-- BONJUR -->
+                <article class="video-produto">
+                    <h3>Bonjur</h3>
+                    <div class="video-moldura">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="videos/bonjur.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                </article>
+
+                <!-- HI & HELLO -->
+                <article class="video-produto">
+                    <h3>HI & HELLO</h3>
+                    <div class="video-moldura">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="videos/Iced_coffee_drinks_on_table_20260913190439.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                </article>
+            </div>
+
+            <!-- BOTÃO DO CARDÁPIO -->
+            <div class="botao-destaques">
+                <a href="cardapio.html" class="botao-cardapio">
+                    Ver cardápio completo
+                </a>
+            </div>
+        </section>
+
+        <!-- CARD PRODUTOS / CATEGORIAS -->
+        <section class="area-categorias">
+            <!-- Banner Esquerdo -->
+            <div class="banner-lateral banner-esquerdo">
+                <img src="imagens/Chocolate Quente.jpeg" alt="Pães artesanais frescos">
+            </div>
+
+            <!-- Card Central -->
+            <div class="card-principal">
+                <div class="card-corpo">
+                    <div class="secao-interna">
+                        <h2>Nossas categorias</h2>
+                        <div class="linha-subtitulo"></div>
+
+                        <div class="produtos">
+                            <article class="produto">
+                                <img src="imagens/Bageta.jpg" alt="Pães fresquinhos" loading="lazy">
+                                <h3>Pães</h3>
+                                <p>variedades de pães fresquinhos todos os dias</p>
+                                <a href="./cardapio.html#paes" class="categoria">Ver categoria</a>
+                            </article>
+
+                            <article class="produto">
+                                <img src="imagens/tapioca1.jpeg" alt="tapioca" loading="lazy">
+                                <h3>Tapiocas</h3>
+                                <p>Tapiocas recheadas com ingredientes frescos.</p>
+                                <a href="./cardapio.html#tapiocas" class="categoria">Ver categoria</a>
+                            </article>
+
+                            <article class="produto">
+                                <img src="imagens/cappuccino.jpeg" alt="Café preparado na hora" loading="lazy">
+                                <h3>Cafés</h3>
+                                <p>Cafés preparados na hora, com grãos selecionados.</p>
+                                <a href="./cardapio.html#cafes" class="categoria">Ver categoria</a>
+                            </article>
+
+                            <article class="produto">
+                                <img src="imagens/Macaron.jpg" alt="categoria" loading="lazy">
+                                <h3>Doces</h3>
+                                <p>Doces e sobremesas feitos com carinho.</p>
+                                <a href="./cardapio.html#doces" class="categoria">Ver categoria</a>
+                            </article>
+                        </div>
+
+                        <a href="cardapio.html" class="botao-cardapio">Ver cardápio completo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Direito -->
+            <div class="banner-lateral banner-direito">
+                <img src="imagens/CHÁ GELADO DE FRUTAS.jpeg" alt="Cafés especiais e bebidas">
+            </div>
+        </section>
+
+        <!-- 3. INSTAGRAM -->
+        <section id="instagram">
+            <h2>Siga a gente no Instagram</h2>
+            <p>Acompanhe novidades e bastidores da nossa padaria!</p>
+            <a href="https://www.instagram.com/hi_hello.coffe/" class="botao" target="_blank" rel="noopener noreferrer">Acessar Instagram</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-conteudo">
+            <h2>Padaria Tech</h2>
+            <p>Pães fresquinhos todos os dias</p>
+            <p>São Paulo — Zona Sul</p>
+            <p>Seg - Sáb | 07:00 - 19:00</p>
+            <a href="https://www.instagram.com/hi_hello.coffe/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="copyright">© 2026 Padaria Tech</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const menu = document.getElementById('menuPrincipal');
+
+        navToggle.addEventListener('click', () => {
+            const aberto = menu.classList.toggle('aberto');
+            navToggle.classList.toggle('aberto');
+            navToggle.setAttribute('aria-expanded', aberto);
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('aberto');
+                navToggle.classList.remove('aberto');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+    <script type="module" src="./js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,904 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+
+:root {
+
+    --marrom-escuro: #3e2723;
+    --marrom: #6f4e37;
+    --marrom-claro: #8b5e3c;
+    --marrom-hover: #5a3d2b;
+
+    --creme: #fff8f0;
+    --creme-card: #fffaf4;
+
+    --laranja: #ff7802;
+
+    --texto: #3e2723;
+
+    --sombra: rgba(62, 39, 35, 0.15);
+
+    --fonte-titulo: "Fraunces", serif;
+    --fonte-texto: "Inter", Arial, sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: var(--fonte-texto);
+
+    color: var(--texto);
+
+    background-image:
+        linear-gradient(
+            rgba(62, 39, 35, 0.45),
+            rgba(62, 39, 35, 0.45)
+        ),
+        url("imagens/cardapio.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+.cabecalho-cardapio {
+
+    text-align: center;
+
+    padding: 50px 20px 35px;
+
+    color: white;
+}
+
+.cabecalho-cardapio h1 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: clamp(38px, 6vw, 58px);
+
+    margin: 30px 0 10px;
+
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cabecalho-cardapio p {
+
+    font-size: 16px;
+
+    opacity: 0.95;
+
+    margin-bottom: 20px;
+}
+
+.btn-voltar {
+
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    background: var(--marrom);
+
+    color: var(--creme);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.btn-voltar:hover {
+
+    background: var(--marrom-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CARRINHO */
+
+.carrinho-indicador {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 9px 16px;
+
+    margin-top: 10px;
+
+    background: rgba(255, 248, 240, 0.15);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(8px);
+}
+
+
+#contador-carrinho {
+
+    font-weight: 700;
+
+    background: var(--laranja);
+
+    padding: 2px 8px;
+
+    border-radius: 20px;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categoria {
+
+    background: rgba(255, 248, 240, 0.95);
+
+    padding: 30px;
+
+    margin-bottom: 35px;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(107, 66, 38, 0.12);
+
+    box-shadow:
+        0 10px 35px var(--sombra);
+}
+
+
+.categoria h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 32px;
+
+    color: var(--marrom-escuro);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.itens-cardapio,
+.itens-cardapio-tapiocas,
+.itens-cardapio-salgados,
+.itens-cardapio-doce,
+.itens-cardapio-bebidas,
+.itens-cardapio-especialidades {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.item-cardapio {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf4,
+            #f4e4d4
+        );
+
+    border: 1px solid rgba(107, 66, 38, 0.16);
+
+    border-radius: 18px;
+
+    padding: 16px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+
+    box-shadow:
+        0 7px 20px rgba(62, 39, 35, 0.10);
+}
+
+
+.item-cardapio:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(111, 78, 55, 0.45);
+
+    box-shadow:
+        0 14px 30px rgba(62, 39, 35, 0.18);
+}
+
+
+/* PRODUTO DESTAQUE */
+
+.item-cardapio.destaque {
+
+    border: 2px solid rgba(111, 78, 55, 0.45);
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf4,
+            #f8ddc4
+        );
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.item-cardapio img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    margin-bottom: 15px;
+
+    display: block;
+}
+
+
+/* =========================
+   NOME
+========================= */
+
+.item-cardapio h3 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 23px;
+
+    color: var(--marrom-escuro);
+
+    margin-bottom: 15px;
+
+    min-height: 30px;
+}
+
+
+/* =========================
+   BOTÃO CARRINHO
+========================= */
+
+.btn-carrinho {
+
+    width: 100%;
+
+    border: none;
+
+    background: var(--marrom);
+
+    color: var(--creme);
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    font-family: var(--fonte-texto);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    margin-top: auto;
+}
+
+
+.btn-carrinho:hover {
+
+    background: var(--marrom-hover);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   BOTÃO FINAL
+========================= */
+
+.btn-inicio {
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 40px auto 30px;
+
+    padding: 13px 25px;
+
+    background: var(--marrom);
+
+    color: var(--creme);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+
+.btn-inicio:hover {
+
+    background: var(--marrom-hover);
+
+    box-shadow: 0 0 18px rgba(111, 78, 55, 0.4);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(29, 18, 15, 0.75);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+
+    z-index: 9999;
+}
+
+
+.modal.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* CONTEÚDO DO MODAL */
+
+.modal-conteudo {
+
+    position: relative;
+
+    width: min(850px, 100%);
+
+    max-height: 90vh;
+
+    overflow: auto;
+
+    background: var(--creme);
+
+    border-radius: 24px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    transform: scale(0.9);
+
+    transition: 0.3s ease;
+}
+
+
+.modal.ativo .modal-conteudo {
+
+    transform: scale(1);
+}
+
+
+/* FOTO MODAL */
+
+#modal-imagem {
+
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+/* INFORMAÇÕES */
+
+.modal-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.modal-info h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 38px;
+
+    color: var(--marrom-escuro);
+
+    margin-bottom: 18px;
+}
+
+
+.modal-info p {
+
+    color: #6f4e37;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+    margin-bottom: 22px;
+}
+
+
+#modal-preco {
+
+    color: var(--marrom);
+
+    font-size: 28px;
+
+    margin-bottom: 22px;
+}
+
+
+/* BOTÃO MODAL */
+
+.btn-modal-carrinho {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: var(--marrom);
+
+    color: var(--creme);
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+.btn-modal-carrinho:hover {
+
+    background: var(--marrom-hover);
+
+    transform: translateY(-2px);
+}
+
+
+/* FECHAR */
+
+.fechar-modal {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(62, 39, 35, 0.85);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: 0.3s ease;
+}
+
+
+.fechar-modal:hover {
+
+    background: var(--marrom-hover);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 750px) {
+
+    .itens-cardapio,
+    .itens-cardapio-tapiocas,
+    .itens-cardapio-salgados,
+    .itens-cardapio-doce,
+    .itens-cardapio-bebidas,
+    .itens-cardapio-especialidades {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .categoria {
+
+        padding: 20px;
+    }
+
+
+    .item-cardapio img {
+
+        height: 240px;
+    }
+
+
+    .modal-conteudo {
+
+        grid-template-columns: 1fr;
+
+        padding: 18px;
+
+        max-height: 92vh;
+    }
+
+
+    #modal-imagem {
+
+        height: 280px;
+    }
+
+
+    .modal-info h2 {
+
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    main {
+
+        padding: 10px;
+    }
+
+
+    .cabecalho-cardapio {
+
+        padding: 35px 15px 25px;
+    }
+
+
+    .categoria {
+
+        border-radius: 18px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .item-cardapio img {
+
+        height: 210px;
+    }
+
+}
+
+/* =========================
+   MODAL DE CADASTRO
+========================= */
+
+.modal-cadastro {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(35, 22, 18, 0.78);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+
+    z-index: 10000;
+}
+
+
+.modal-cadastro.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+.modal-cadastro-conteudo {
+
+    position: relative;
+
+    width: min(430px, 100%);
+
+    background: var(--creme);
+
+    border-radius: 22px;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(20px) scale(0.95);
+
+    transition: 0.3s ease;
+}
+
+
+.modal-cadastro.ativo .modal-cadastro-conteudo {
+
+    transform: translateY(0) scale(1);
+}
+
+
+.icone-cadastro {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f1dfcc;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+}
+
+
+.modal-cadastro-conteudo h2 {
+
+    font-family: var(--fonte-titulo);
+
+    color: var(--marrom-escuro);
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+.modal-cadastro-conteudo p {
+
+    color: #6f4e37;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+.btn-cadastro {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 13px;
+
+    background: var(--marrom);
+
+    color: var(--creme);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+
+    margin-bottom: 10px;
+}
+
+
+.btn-cadastro:hover {
+
+    background: var(--marrom-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 18px rgba(62, 39, 35, 0.2);
+}
+
+
+.btn-continuar {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--marrom);
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+
+.btn-continuar:hover {
+
+    background: #f1dfcc;
+}
+
+
+.fechar-cadastro {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ead8c6;
+
+    color: var(--marrom-escuro);
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.fechar-cadastro:hover {
+
+    background: var(--marrom);
+
+    color: white;
+
+    transform: rotate(90deg);
+}
